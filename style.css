@@ -19,7 +19,6 @@ body {
   align-items: center;
   width: 170px;
   height: 170px;
-  background: rgba(255, 255, 255, 0.1);
 }
 
 .main .navigation {
@@ -39,6 +38,15 @@ body {
   height: 7px;
   background: #fff;
   transform: translate(calc(14px * var(--x)), calc(14px * var(--y)));
+  transition: transform 0.5s, width 0.5s, height 0.5s, background 0.5s;
+  transition-delay: calc(0.1s * var(--i));
+}
+
+.main .navigation.active span {
+  width: 45px;
+  height: 45px;
+  background: #1f2536;
+  transform: translate(calc(60px * var(--x)), calc(60px * var(--y)));
 }
 
 .close {
@@ -46,4 +54,14 @@ body {
   width: 7px;
   height: 7px;
   background: #fff;
+  transition-delay: 0.4s;
+  pointer-events: none;
+}
+
+.main .navigation.active ~ .close {
+  width: 40px;
+  height: 40px;
+  pointer-events: initial;
+  transition-delay: 0.8s;
+  background: #c12dfc;
 }
