@@ -40,6 +40,9 @@ body {
   transform: translate(calc(14px * var(--x)), calc(14px * var(--y)));
   transition: transform 0.5s, width 0.5s, height 0.5s, background 0.5s;
   transition-delay: calc(0.1s * var(--i));
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main .navigation.active span {
@@ -49,7 +52,23 @@ body {
   transform: translate(calc(60px * var(--x)), calc(60px * var(--y)));
 }
 
-.close {
+.main .navigation span ion-icon {
+  transition: 0.5s;
+  font-size: 0em;
+  color: #fff;
+}
+
+.main .navigation.active span ion-icon {
+  font-size: 1.35em;
+}
+
+.main .navigation.active span:hover ion-icon {
+  color: #c12dfc;
+  filter: drop-shadow(0 0 2px #c12dfc) drop-shadow(0 0 5px #c12dfc)
+    drop-shadow(0 0 15px #c12dfc);
+}
+
+.main .navigation .close {
   position: absolute;
   width: 7px;
   height: 7px;
