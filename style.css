@@ -26,7 +26,6 @@ body {
   position: relative;
   width: 40px;
   height: 40px;
-  background: rgba(255, 255, 255, 0.2);
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -40,4 +39,11 @@ body {
   height: 7px;
   background: #fff;
   transform: translate(calc(14px * var(--x)), calc(14px * var(--y)));
+}
+
+.close {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: #fff;
 }
