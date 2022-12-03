@@ -21,5 +21,16 @@
       </div>
       <div class="close"></div>
     </div>
+
+    <script>
+      let navigation = document.querySelector('.navigation'),
+        close = document.querySelector('.close');
+      navigation.onclick = function () {
+        navigation.classList.add('active');
+      };
+      close.onclick = function () {
+        navigation.classList.remove('active');
+      };
+    </script>
   </body>
 </html>
